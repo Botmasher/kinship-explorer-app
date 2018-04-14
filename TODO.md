@@ -1,0 +1,53 @@
+# Task List
+
+## Components
+- [X] create UI menu
+	- [X] display primary terms by default (compounds)
+	- [X] select a system (types)
+	- [X] select an example (labels)
+	- [X] display current system being viewed
+	- [X] display current language being viewed
+- [X] create start display
+	- [X] show message when user selects a system while game loads
+	- [X] guard against changing set system/language state while game loads
+	- [X] once loaded, show kinship system selection
+- [ ] switch description when game has loaded
+	- [X] get the basic task up and running with interval checks for `gameLoaded`
+	- [ ] find a better way than loop checks of `window.gameLoaded`
+	- [ ] attach async work to the window and have React component follow up on it
+	- [ ] see game `Assets/plugins/C~.jslib` for method call when game finishes loading
+- [ ] cite sources (standin link currently in footer)
+	- [ ] https://umanitoba.ca/faculties/arts/anthropology/tutor/kinterms/termsys.html
+	- [ ] Wiktionary
+	- [ ] wehewehe.org
+	- [ ] _Lengua y cultura Yanomami_ for proposed grandparent terms
+	- [ ] http://www.twi.bb/ for proposed grandparent terms
+	- [ ] explain: many cultural complications behind the simple terms used here, e.g. for [Igbo](https://umanitoba.ca/faculties/arts/anthropology/tutor/kinterms/igbo_terms.html)
+	- [ ] Navajo:
+		- http://www.unco.edu/library/pdf/Navajo_English_Dictionary.pdf
+		- https://anthrosource.onlinelibrary.wiley.com/doi/pdf/10.1525/aa.1970.72.6.02a00190
+		- http://navajopeople.org/blog/ke-dine-navajo-kinship-system/
+
+## State
+- [X] redo list and state to focus on each system rather than selecting languages
+	- [X] just display one example language per system
+	- [X] display system descriptions
+	- [X] style and keyframe descriptions
+- [ ] reconsider how app is duplicating language name data to associate them with systems
+	- [ ] should the backend store data associating languages with systems?
+	- [ ] should 
+
+## Data
+- [ ] review how all backend data packaged into game build and instantiated in game instance
+- [ ] consider better ways of tying app to visualization data and list them here
+
+## Testing
+- [ ] set up tests
+
+## Feedback
+- [X] make it clear to user the difference between system name (e.g. Sudanese) and language (e.g. Latin)
+- [ ] (in game code) extend generations below ego, e.g. Dutch nephew/niece = cousin terms (https://www.patreon.com/posts/slapping-labels-17717106)
+	- [ ] changes game logic and family tree builder
+	- [ ] presentation asset needs for generating -1 and -2 ties / members
+	- [ ] add data to every language in the JSON
+	- [ ] figure out dynamic node placement to make generating trees like this flexible
