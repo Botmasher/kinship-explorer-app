@@ -16,18 +16,20 @@
 	- [ ] find a better way than loop checks of `window.gameLoaded`
 	- [ ] attach async work to the window and have React component follow up on it
 	- [ ] see game `Assets/plugins/C~.jslib` for method call when game finishes loading
-- [ ] cite and link sources
-	- [ ] create sources documentation
-	- [ ] update link currently in footer
+- [X] cite and link sources
+	- [X] create sources documentation
+	- [X] update link currently in footer
+- [ ] add router and routes/links for bookmarkable per-system visualizations 
+- [ ] 404 routing
 
 ## State
 - [X] redo list and state to focus on each system rather than selecting languages
 	- [X] just display one example language per system
 	- [X] display system descriptions
 	- [X] style and keyframe descriptions
+- [ ] revisit how app stores state vs passes params after introduction of single-page routing
 - [ ] reconsider how app is duplicating language name data to associate them with systems
 	- [ ] should the backend store data associating languages with systems?
-	- [ ] should 
 
 ## Data
 - [ ] review how all backend data packaged into game build and instantiated in game instance

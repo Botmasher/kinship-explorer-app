@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 import GameMenu from './GameMenu';
 import GameContainer from './GameContainer';
 import { store } from '../store';
@@ -10,7 +11,7 @@ class App extends Component {
 			isLoaded: false,
 			unloadedClicks: 0,
 			currentSystem: 'global',
-			currentLanguage: 'Primary'
+			currentLanguage: 'Primary' // defaults to 'Primary'
 		};
 	}
 
@@ -54,19 +55,36 @@ class App extends Component {
 				<h1 className="app-title">
 					<span className="letter-decoration">K</span>inship <span className="letter-decoration">T</span>erm <span className="letter-decoration">E</span>xplorer
 				</h1>
-				<GameMenu
-					handleUpdateTreeLabels={this.handleUpdateTreeLabels}
-					handleUpdateSystem={this.handleUpdateSystem}
-					systems={Object.keys(systems).reduce((systemNameMaps, systemId) => [
-						...systemNameMaps,
-						{ id: systemId, name: systems[systemId].name }
-					], [])}
-					currentSystemId={currentSystem}
-					currentLanguage={currentLanguage}
-					currentDescription={systems[currentSystem].description}
-					isGameLoaded={isLoaded}
-					unloadedClicks={unloadedClicks}
-				/>
+				<Route path="/:system" render={({ match }) => (
+					<GameMenu
+						handleUpdateTreeLabels={this.handleUpdateTreeLabels}
+						handleUpdateSystem={this.handleUpdateSystem}
+						systems={Object.keys(systems).reduce((systemNameMaps, systemId) => [
+							...systemNameMaps,
+							{ id: systemId, name: systems[systemId].name }
+						], [])}
+						currentSystemId={match.params.system}
+						currentLanguage={systems[match.params.system].languages[0]}
+						currentDescription={systems[match.params.system].description}
+						isGameLoaded={isLoaded}
+						unloadedClicks={unloadedClicks}
+					/>
+				)} />
+				<Route exact path="/" render={({ match }) => (
+					<GameMenu
+						handleUpdateTreeLabels={this.handleUpdateTreeLabels}
+						handleUpdateSystem={this.handleUpdateSystem}
+						systems={Object.keys(systems).reduce((systemNameMaps, systemId) => [
+							...systemNameMaps,
+							{ id: systemId, name: systems[systemId].name }
+						], [])}
+						currentSystemId={currentSystem}
+						currentLanguage={currentLanguage}
+						currentDescription={systems[currentSystem].description}
+						isGameLoaded={isLoaded}
+						unloadedClicks={unloadedClicks}
+					/>
+				)} />
 				<GameContainer
 					title={"Kinship Term Explorer"}
 					setFullscreen={this.setFullscreen}
