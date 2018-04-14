@@ -37,6 +37,7 @@
 - [ ] set up tests
 
 ## Feedback
+- [ ] choose a license for this project
 - [X] make it clear to user the difference between system name (e.g. Sudanese) and language (e.g. Latin)
 - [ ] (in game code) extend generations below ego, e.g. Dutch nephew/niece = cousin terms (https://www.patreon.com/posts/slapping-labels-17717106)
 	- [ ] changes game logic and family tree builder

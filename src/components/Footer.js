@@ -3,13 +3,10 @@ import { PropTypes } from 'prop-types';
 
 const Footer = ({ setFullscreen }) => (
 	<div className="footer">
-		<div>Kinship Term Explorer created April 2018 based on data from <a href="">these sources</a>.</div>
+		<div>I <a href="https://github.com/Botmasher/kinship-term-explorer">created</a> this app April 2018 with data from <a href="https://github.com/Botmasher/kinship-explorer-app/blob/master/SOURCES.md">these sources</a>.</div>
 		{/*
-			<div className="webgl-logo"></div>
-			<div className="fullscreen" onClick={setFullscreen}></div>
-			<div className="title">{title}</div>
+			<div className="fullscreen-empty" onClick={setFullscreen}>test fullscreen</div>
 		*/}
-		<div className="fullscreen-empty" onClick={setFullscreen}>test fullscreen</div>
 	</div>
 );
 
