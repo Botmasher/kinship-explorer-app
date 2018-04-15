@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 
 const SystemsMenu = ({systems, currentSystemId, handleUpdateSystem}) => (
 	<ul>
-		{systems.map(systemMap => (
-			systemMap.id === currentSystemId
-				? <li className="selected" key={systemMap.id}>{systemMap.name}</li> 
-				: <li key={systemMap.id}><Link to={systemMap.id} onClick={() => handleUpdateSystem(systemMap.id)}>{systemMap.name}</Link></li>
+		{Object.keys(systems).map(systemId => (
+			systemId === currentSystemId
+				? <li className="selected" key={systemId}>{systems[systemId].name}</li> 
+				: <li key={systemId}><Link to={`/${systemId}`} onClick={() => handleUpdateSystem(systemId)}>{systems[systemId].name}</Link></li>
 		))}
 	</ul>
 );

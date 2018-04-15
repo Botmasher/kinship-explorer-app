@@ -19,7 +19,7 @@
 - [X] cite and link sources
 	- [X] create sources documentation
 	- [X] update link currently in footer
-- [ ] add router and routes/links for bookmarkable per-system visualizations 
+- [X] add router and routes/links for bookmarkable per-system visualizations 
 - [ ] 404 routing
 
 ## State
