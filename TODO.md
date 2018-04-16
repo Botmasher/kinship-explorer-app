@@ -21,6 +21,11 @@
 	- [X] update link currently in footer
 - [X] add router and routes/links for bookmarkable per-system visualizations 
 - [ ] 404 routing
+- [ ] allow scrolling when pointer over game instance
+- [ ] break out route params check into a `GameContainer`
+	- [ ] this container will handle picking current language and system using params and store
+	- [ ] this container will render subcomponents for the menu, desc, visualization
+	- [ ] rename child presentaiton component `GameContainer` to `GameInstance`
 
 ## State
 - [X] redo list and state to focus on each system rather than selecting languages
