@@ -3,13 +3,14 @@ import { PropTypes } from 'prop-types';
 import SystemsMenu from './SystemsMenu';
 import SystemDescription from './SystemDescription';
 
-const GameMenu = ({ systems, currentSystemId, currentLanguage, currentDescription, handleLoadingClick, isGameLoaded, unloadedClicks }) => {
+const GameMenu = ({ systemNames, currentSystemId, currentLanguage, currentDescription, handleLoadingClick, isGameLoaded, unloadedClicks }) => {
 	// message Unity gameInstance function
 	window.gameInstance.SendMessage('Nodes Manager', 'LabelFamilyMembers', currentLanguage);
+	console.log(systemNames);
 	return (
 		<div id="game-menu">
 			<div className="systems-list systems-list-anim">
-				<SystemsMenu systems={systems} currentSystemId={currentSystemId} handleLoadingClick={handleLoadingClick} />
+				<SystemsMenu systemNames={systemNames} currentSystemId={currentSystemId} handleLoadingClick={handleLoadingClick} />
 				{isGameLoaded
 					?	<SystemDescription currentSystemId={currentSystemId} currentLanguage={currentLanguage} currentDescription={currentDescription} />
 					: <div key={`unloaded-message-${unloadedClicks}`} className="menu-loading"><br/>Currently loading game instance.<br/></div>
@@ -20,7 +21,7 @@ const GameMenu = ({ systems, currentSystemId, currentLanguage, currentDescriptio
 };
 
 GameMenu.propTypes = {
-	systems: PropTypes.object.isRequired,
+	systemNames: PropTypes.array.isRequired,
 	currentSystemId: PropTypes.string.isRequired,
 	currentLanguage: PropTypes.string.isRequired,
 	currentDescription: PropTypes.string,

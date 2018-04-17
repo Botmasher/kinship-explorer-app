@@ -17,7 +17,9 @@ const GameContainer = ({ systemId, handleLoadingClick, isGameLoaded, unloadedCli
 	return (
 		<div id="game-container">
 			<GameMenu
-				systems={systems}
+				systemNames={Object.keys(systems).reduce((systemNames, system) => (
+					[ ...systemNames, { id: system, name: systems[system].name } ]
+				), [])}
 				currentSystemId={currentSystemId}
 				currentLanguage={currentLanguage}
 				currentDescription={currentDescription}

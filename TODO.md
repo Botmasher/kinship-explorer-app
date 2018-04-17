@@ -24,10 +24,13 @@
 - [ ] allow scrolling when pointer over game instance
 - [X] break out route params check into a `GameContainer`
 	- [X] this container will handle picking current language and system using params and store
-	- [X] this container will render subcomponents for the menu, desc, visualization
+	- [X] this container will render subcomponents for the menu, desc, visualization, footer
 	- [X] rename child presentaiton component `GameContainer` to `GamePlayer`
-- [ ] split out `window.gameInstance` handlers and import into components (like `GameMenu`)
-- [ ] refactor how `GameContainer` passes systems to subcomponent (avoid whole datastore)
+- [ ] split out `window.gameInstance` handlers and import into components like `GameMenu`
+- [X] refactor how `GameContainer` passes systems to subcomponent (avoid whole datastore)
+
+## Styles
+- [ ] CSS breakpoints for smaller widths
 
 ## State
 - [X] redo list and state to focus on each system rather than selecting languages

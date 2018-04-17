@@ -2,22 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const SystemsMenu = ({ systems, currentSystemId, handleLoadingClick }) => (
+const SystemsMenu = ({ systemNames, currentSystemId, handleLoadingClick }) => (
 	<ul>
-		{Object.keys(systems).map(systemId => (
-			systemId === currentSystemId
-				? <li className="selected" key={systemId}>
-						{systems[systemId].name}
+		{systemNames.map(sys => (
+			sys.id === currentSystemId
+				? <li className="selected" key={sys.id}>
+						{sys.name}
 					</li> 
-				: <li key={systemId}>
-						<Link to={`/${systemId}`} onClick={() => handleLoadingClick()}>{systems[systemId].name}</Link>
+				: <li key={sys.id}>
+						<Link to={`/${sys.id}`} onClick={() => handleLoadingClick()}>{sys.name}</Link>
 					</li>
 		))}
 	</ul>
 );
 
 SystemsMenu.propTypes = {
-	systems: PropTypes.object.isRequired,
+	systemNames: PropTypes.array.isRequired,
 	currentSystemId: PropTypes.string.isRequired,
 	handleLoadingClick: PropTypes.func.isRequired
 };
