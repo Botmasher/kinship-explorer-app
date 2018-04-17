@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import GameMenu from './GameMenu';
 import GameContainer from './GameContainer';
-import { store } from '../store';
 
 class App extends Component {
 	constructor(props) {
@@ -21,8 +19,6 @@ class App extends Component {
 		;
 	};
 
-	setFullscreen = () => window.gameInstance.SetFullscreen(1);
-
 	componentDidMount() {
 		// check that game has fully loaded (used for e.g. mounting menu description)
 		if (!this.state.isLoaded) {
@@ -35,7 +31,6 @@ class App extends Component {
 
 	render() {
 		const { isLoaded, unloadedClicks } = this.state;
-		const { systems } = store;
 		return (
 			<div className="App">
 				<h1 className="app-title">
@@ -44,20 +39,13 @@ class App extends Component {
 					<span className="letter-decoration">E</span>{'xplorer'}
 				</h1>
 				<Route path="/:system?" render={({ match }) => (
-					<GameMenu
+					<GameContainer
 						handleLoadingClick={this.handleLoadingClick}
-						systems={systems}
-						currentSystemId={match.params && match.params.system ? match.params.system : 'global'}
-						currentLanguage={match.params && match.params.system ? systems[match.params.system].languages[0] : 'Primary'}
-						currentDescription={match.params && match.params.system ? systems[match.params.system].description : systems['global'].description}
+						systemId={match && match.params && match.params.system ? match.params.system : null}
 						isGameLoaded={isLoaded}
 						unloadedClicks={unloadedClicks}
 					/>
 				)} />
-				<GameContainer
-					title={"Kinship Term Explorer"}
-					setFullscreen={this.setFullscreen}
-				/>
 			</div>
 		);
 	}
