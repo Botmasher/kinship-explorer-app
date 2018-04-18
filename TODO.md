@@ -32,6 +32,10 @@
 ## Styles
 - [ ] CSS breakpoints for smaller widths
 
+## Server
+- [ ] Heroku responding `404` instead of loading `react-router` routes
+	- [ ] https://stackoverflow.com/questions/41772411/react-routing-works-in-local-machine-but-not-heroku
+
 ## State
 - [X] redo list and state to focus on each system rather than selecting languages
 	- [X] just display one example language per system
