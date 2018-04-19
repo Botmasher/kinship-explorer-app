@@ -6,7 +6,6 @@ import SystemDescription from './SystemDescription';
 const GameMenu = ({ systemNames, currentSystemId, currentLanguage, currentDescription, handleLoadingClick, isGameLoaded, unloadedClicks }) => {
 	// message Unity gameInstance function
 	window.gameInstance.SendMessage('Nodes Manager', 'LabelFamilyMembers', currentLanguage);
-	console.log(systemNames);
 	return (
 		<div id="game-menu">
 			<div className="systems-list systems-list-anim">

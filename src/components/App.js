@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import GameContainer from './GameContainer';
+import PageNotFound from './PageNotFound';
+import { store } from '../store';
 
 class App extends Component {
 	constructor(props) {
@@ -31,6 +33,7 @@ class App extends Component {
 
 	render() {
 		const { isLoaded, unloadedClicks } = this.state;
+		const { systems } = store;
 		return (
 			<div className="App">
 				<h1 className="app-title">
@@ -38,14 +41,27 @@ class App extends Component {
 					<span className="letter-decoration">T</span>{'erm '}
 					<span className="letter-decoration">E</span>{'xplorer'}
 				</h1>
-				<Route path="/:system?" render={({ match }) => (
-					<GameContainer
-						handleLoadingClick={this.handleLoadingClick}
-						systemId={match && match.params && match.params.system ? match.params.system : null}
-						isGameLoaded={isLoaded}
-						unloadedClicks={unloadedClicks}
-					/>
-				)} />
+				<Switch>
+					<Route exact path="/" render={() => (
+						<GameContainer
+							handleLoadingClick={this.handleLoadingClick}
+							systemId={'global'}
+							isGameLoaded={isLoaded}
+							unloadedClicks={unloadedClicks}
+						/>
+					)} />
+					<Route exact path="/:system?" render={({ match }) => (
+						match && match.params && Object.keys(systems).includes(match.params.system)
+						?	<GameContainer
+								handleLoadingClick={this.handleLoadingClick}
+								systemId={match && match.params && match.params.system ? match.params.system : null}
+								isGameLoaded={isLoaded}
+								unloadedClicks={unloadedClicks}
+							/>
+						: <PageNotFound match={match} />
+					)} />
+					<Route component={PageNotFound} />
+				</Switch>
 			</div>
 		);
 	}

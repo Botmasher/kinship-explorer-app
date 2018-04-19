@@ -20,7 +20,7 @@
 	- [X] create sources documentation
 	- [X] update link currently in footer
 - [X] add router and routes/links for bookmarkable per-system visualizations 
-- [ ] 404 routing
+- [X] 404 routing
 - [ ] allow scrolling when pointer over game instance
 - [X] break out route params check into a `GameContainer`
 	- [X] this container will handle picking current language and system using params and store
@@ -33,8 +33,8 @@
 - [ ] CSS breakpoints for smaller widths
 
 ## Server
-- [ ] Heroku responding `404` instead of loading `react-router` routes
-	- [ ] https://stackoverflow.com/questions/41772411/react-routing-works-in-local-machine-but-not-heroku
+- [X] Heroku responding `404` instead of loading `react-router` routes
+	- [X] https://stackoverflow.com/questions/41772411/react-routing-works-in-local-machine-but-not-heroku
 
 ## State
 - [X] redo list and state to focus on each system rather than selecting languages
