@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import GameContainer from './GameContainer';
 import PageNotFound from './PageNotFound';
 import { store } from '../store';
+import { isGameLoaded, onGameLoaded } from '../utils';
 
 class App extends Component {
 	constructor(props) {
@@ -15,20 +16,15 @@ class App extends Component {
 
 	handleLoadingClick = () => {
 		// check for routing during game load - used to update div keys
-		!window.gameLoaded
-			? this.setState(prevState => ({unloadedClicks: prevState.unloadedClicks+1}))
-			: this.setState({isLoaded: true})
+		isGameLoaded()
+			? this.setState({isLoaded: true})
+			: this.setState(prevState => ({unloadedClicks: prevState.unloadedClicks+1}))
 		;
 	};
 
 	componentDidMount() {
 		// check that game has fully loaded (used for e.g. mounting menu description)
-		if (!this.state.isLoaded) {
-			const interval = window.setInterval(() => {
-				window.gameLoaded && window.clearInterval(interval);
-				window.gameLoaded && this.setState({isLoaded: true});
-			}, 1000);
-		}
+		!this.state.isLoaded && onGameLoaded(() => this.setState({isLoaded: true}));
 	}
 
 	render() {

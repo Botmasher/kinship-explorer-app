@@ -2,10 +2,11 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import SystemsMenu from './SystemsMenu';
 import SystemDescription from './SystemDescription';
+import { setGameLabels } from '../utils';
 
 const GameMenu = ({ systemNames, currentSystemId, currentLanguage, currentDescription, handleLoadingClick, isGameLoaded, unloadedClicks }) => {
 	// message Unity gameInstance function
-	window.gameInstance.SendMessage('Nodes Manager', 'LabelFamilyMembers', currentLanguage);
+	setGameLabels(currentLanguage);
 	return (
 		<div id="game-menu">
 			<div className="systems-list systems-list-anim">

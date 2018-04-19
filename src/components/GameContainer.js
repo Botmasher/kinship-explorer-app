@@ -4,8 +4,7 @@ import GameMenu from './GameMenu';
 import GamePlayer from './GamePlayer';
 import Footer from './Footer';
 import { store } from '../store';
-
-const setFullscreen = () => window.gameInstance.SetFullscreen(1);
+import { setFullscreen } from '../utils';
 
 const GameContainer = ({ systemId, handleLoadingClick, isGameLoaded, unloadedClicks }) => {
 	const defaultSystem = 'global';

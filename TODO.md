@@ -22,11 +22,13 @@
 - [X] add router and routes/links for bookmarkable per-system visualizations 
 - [X] 404 routing
 - [ ] allow scrolling when pointer over game instance
+	- https://docs.unity3d.com/ScriptReference/WebGLInput-captureAllKeyboardInput.html
+	- https://stackoverflow.com/questions/38897929/unity-webgl-prevent-canvas-from-eating-up-all-mouse-keyboard-input-html
 - [X] break out route params check into a `GameContainer`
 	- [X] this container will handle picking current language and system using params and store
 	- [X] this container will render subcomponents for the menu, desc, visualization, footer
 	- [X] rename child presentaiton component `GameContainer` to `GamePlayer`
-- [ ] split out `window.gameInstance` handlers and import into components like `GameMenu`
+- [X] split out `window.gameInstance` handlers and import into components like `GameMenu`
 - [X] refactor how `GameContainer` passes systems to subcomponent (avoid whole datastore)
 
 ## Styles
