@@ -9,6 +9,6 @@ export const onGameLoaded = handler => {
 
 export const setFullscreen = () => window.gameInstance.SetFullscreen(1);
 
-export const setGameLabels = (language) => (
+export const setGameLabels = language => (
 	window.gameInstance.SendMessage('Nodes Manager', 'LabelFamilyMembers', language)
 );

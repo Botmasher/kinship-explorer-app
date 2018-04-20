@@ -6,4 +6,5 @@ const GamePlayer = () => (
 	</div>
 );
 
+
 export default GamePlayer;
