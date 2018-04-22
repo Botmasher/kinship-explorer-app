@@ -22,6 +22,8 @@
 - [X] add router and routes/links for bookmarkable per-system visualizations 
 - [X] 404 routing
 - [X] allow scrolling when pointer over game instance
+	- [X] add scrollover back in (erased on new game build)
+	- [ ] modularize scrollover code to apply to future builds
 	- https://docs.unity3d.com/ScriptReference/WebGLInput-captureAllKeyboardInput.html
 	- https://stackoverflow.com/questions/38897929/unity-webgl-prevent-canvas-from-eating-up-all-mouse-keyboard-input-html
 - [X] break out route params check into a `GameContainer`
@@ -44,7 +46,7 @@
 	- [X] just display one example language per system
 	- [X] display system descriptions
 	- [X] style and keyframe descriptions
-- [ ] revisit how app stores state vs passes params after introduction of single-page routing
+- [X] revisit how app stores state vs passes params after introduction of single-page routing
 - [ ] reconsider how app is duplicating language name data to associate them with systems
 	- [ ] should the backend store data associating languages with systems?
 
