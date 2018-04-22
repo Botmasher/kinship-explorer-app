@@ -21,7 +21,7 @@
 	- [X] update link currently in footer
 - [X] add router and routes/links for bookmarkable per-system visualizations 
 - [X] 404 routing
-- [ ] allow scrolling when pointer over game instance
+- [X] allow scrolling when pointer over game instance
 	- https://docs.unity3d.com/ScriptReference/WebGLInput-captureAllKeyboardInput.html
 	- https://stackoverflow.com/questions/38897929/unity-webgl-prevent-canvas-from-eating-up-all-mouse-keyboard-input-html
 - [X] break out route params check into a `GameContainer`
@@ -30,6 +30,7 @@
 	- [X] rename child presentaiton component `GameContainer` to `GamePlayer`
 - [X] split out `window.gameInstance` handlers and import into components like `GameMenu`
 - [X] refactor how `GameContainer` passes systems to subcomponent (avoid whole datastore)
+- [ ] handle `window.gameInstance` is undefined (Unity player does not load in certain device simulators)
 
 ## Styles
 - [ ] CSS breakpoints for smaller widths

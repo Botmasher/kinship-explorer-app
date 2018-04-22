@@ -1,3 +1,5 @@
+export const gameExists = () => window.gameInstance !== undefined;
+
 export const isGameLoaded = () => window.gameLoaded;
 
 export const onGameLoaded = handler => {
