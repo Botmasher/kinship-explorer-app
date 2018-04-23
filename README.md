@@ -1,6 +1,6 @@
 # Kinship Term Explorer
 
-![alt text](./screenshot.png "Kinship Term Explorer app screenshot")
+![alt text](https://raw.githubusercontent.com/Botmasher/kinship-explorer-app/master/kinship-explorer-screenshot.png "Kinship Term Explorer app screenshot")
 
 This app explores kinship terminology around the world. It uses six traditional categories from anthropology: "Crow", "Omaha", "Iroquois", "Eskimo", "Sudanese" and "Hawaiian". These buckets are approachable for starters but bring up debates among kinship anthropologists (more on that below).
 
@@ -53,4 +53,4 @@ Both this UI and the embedded visualization were built as a leadup to a multimed
 
 This application is licensed by GitHub user Botmasher (Joshua R) under the terms of the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html). The embedded game build alone `public/unity/production/` is licensed under the [LGPLv3](https://choosealicense.com/licenses/lgpl-3.0/).
 
-Data from specific languages are not necessarily covered by the same license. Read through the [SOURCES.md](./SOURCES.md) to track down their licensing and use terms.
+Data from specific languages are not necessarily covered by the same license. Read through the [SOURCES.md](https://github.com/Botmasher/kinship-explorer-app/SOURCES.md) to track down their licensing and use terms.
