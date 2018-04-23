@@ -29,11 +29,15 @@ body {
 	animation: cycle-colors infinite 20s linear;
 }
 
+.game-container {
+	width: 100%;
+}
+
 #game-menu {
 	position: relative;
 	z-index: 9;
 	margin: 0 auto;
-	width: 700px;
+	width: 750px;
 	padding: 2px;
 	border-top: 1px solid rgb(180, 160, 200);
 	margin-bottom: -12px;
@@ -57,6 +61,22 @@ body {
 .footer {
 	margin-bottom: 100px;
 	font-size: 15px;
+}
+
+@media screen and (max-width: 550px) {
+	#game-menu {
+		width: 90%;
+		margin-bottom: -130px;
+	}
+	.webgl-content {
+		transform: scale(0.5, 0.5);
+		margin-left: calc(0.25 * -992px);
+	}
+	.footer {
+		font-size: 13px;
+		margin-top: -100px;
+		margin-bottom: 100px;
+	}
 }
 
 a {
@@ -111,6 +131,32 @@ a:hover {
 
 .system-description-anim {
 	animation: txt-in forwards 1s ease-out;
+}
+
+@media screen and (max-width: 550px) {
+	.system-description-anim {
+		display: none;
+	}
+	.systems-list ul {
+		display: inline-block;
+		list-style-type: none;
+		margin: 10px 0;
+		padding: 0;
+	}
+	.systems-list ul li {
+		display: inline-block;
+		list-style-type: none;
+		margin: 0 10px;
+		padding: 0;
+	}
+	a {
+		animation: none;
+		color: white;
+	}
+	a:hover {
+		animation: none;
+		color: #a5bbff;
+	}
 }
 
 span.system-language-label {

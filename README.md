@@ -27,7 +27,7 @@ Here's an easy way to get this app up and running locally:
 
 Now you're ready to play with the app and to tinker with project directory files. If you're interested in the family tree visualization, you can dig into [the embedded Unity game](https://github.com/Botmasher/kinship-term-explorer) behind the game instance inside this app.
 
-## Thiking through the code
+## Thinking through the code
 
 Unlike some of my other leadup projects with their minimal interfaces, this one called for a visual approach where info is geometrically positioned and selectable on screen. I decided to start developing an app using C# and Unity. You can find the source files for that game/visualization [inside its own repo](https://github.com/Botmasher/kinship-term-explorer). I created a build of that app (located in `./public/unity/`) and embedded the build in this React frontend for the UI.
 
@@ -53,4 +53,4 @@ Both this UI and the embedded visualization were built as a leadup to a multimed
 
 This application is licensed by GitHub user Botmasher (Joshua R) under the terms of the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html). The embedded game build alone `public/unity/production/` is licensed under the [LGPLv3](https://choosealicense.com/licenses/lgpl-3.0/).
 
-Data from specific languages are not necessarily covered by the same license. Read through the [SOURCES.md](https://github.com/Botmasher/kinship-explorer-app/SOURCES.md) to track down their licensing and use terms.
+Data from specific languages are not necessarily covered by the same license. Read through the [SOURCES.md](https://github.com/Botmasher/kinship-explorer-app/blob/master/SOURCES.md) to track down their licensing and use terms.
