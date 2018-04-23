@@ -15,7 +15,7 @@
 	- [X] get the basic task up and running with interval checks for `gameLoaded`
 	- [ ] find a better way than loop checks of `window.gameLoaded`
 	- [ ] attach async work to the window and have React component follow up on it
-	- [ ] see game `Assets/plugins/C~.jslib` for method call when game finishes loading
+	- [ ] understand: see game `Assets/plugins/C~.jslib` for method call when game finishes loading
 - [X] cite and link sources
 	- [X] create sources documentation
 	- [X] update link currently in footer
@@ -32,7 +32,7 @@
 	- [X] rename child presentaiton component `GameContainer` to `GamePlayer`
 - [X] split out `window.gameInstance` handlers and import into components like `GameMenu`
 - [X] refactor how `GameContainer` passes systems to subcomponent (avoid whole datastore)
-- [ ] handle `window.gameInstance` is undefined (Unity player does not load in certain device simulators)
+- [X] handle `window.gameInstance` is undefined (Unity player does not load in certain device simulators)
 
 ## Styles
 - [ ] CSS breakpoints for smaller widths
@@ -48,10 +48,16 @@
 	- [X] style and keyframe descriptions
 - [X] revisit how app stores state vs passes params after introduction of single-page routing
 - [ ] reconsider how app is duplicating language name data to associate them with systems
-	- [ ] should the backend store data associating languages with systems?
+	- [ ] backend to store data associating languages with systems (once it's ripped from game build)
 
 ## Data
 - [ ] review how all backend data packaged into game build and instantiated in game instance
+	- [ ] pull out data from game visualization build
+	- [ ] trim game build to take in a language dataset
+		- [ ] understand: game already has NodeManager with kin types : game objects hash
+		- [ ] understand: NodeManager knows how to set text and color based on current language
+- [ ] track down data for various languages for each system
+	- [ ] create list component once multiple languages available for each system
 - [ ] consider better ways of tying app to visualization data and list them here
 
 ## Testing
