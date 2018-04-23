@@ -1,5 +1,7 @@
 # Kinship Term Explorer
 
+![alt text](./screenshot.png "Kinship Term Explorer app screenshot")
+
 This app explores kinship terminology around the world. It uses six traditional categories from anthropology: "Crow", "Omaha", "Iroquois", "Eskimo", "Sudanese" and "Hawaiian". These buckets are approachable for starters but bring up debates among kinship anthropologists (more on that below).
 
 ## Why does this exist?
@@ -46,3 +48,9 @@ I originally included "Dravidian" in the list of systems. So far the cross-cousi
 ## Contributing
 
 Both this UI and the embedded visualization were built as a leadup to a multimedia project on kin terms, so they won't be under active development long after that one goes live. Still, if you test out the app and spot ways to fix or improve it, feel free to open an issue or a pull request. Please do document reproducible steps for any fixes or give relevant context for any upgrades. I'm happy you're checking this out!
+
+## License
+
+This application is licensed by GitHub user Botmasher (Joshua R) under the terms of the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html). The embedded game build alone `public/unity/production/` is licensed under the [LGPLv3](https://choosealicense.com/licenses/lgpl-3.0/).
+
+Data from specific languages are not necessarily covered by the same license. Read through the [SOURCES.md](./SOURCES.md) to track down their licensing and use terms.
