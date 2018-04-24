@@ -61,7 +61,11 @@
 - [ ] consider better ways of tying app to visualization data and list them here
 
 ## Testing
+- [X] test tests
 - [ ] set up tests
+	- [ ] understand: what are the pathways through the app
+	- [ ] understand: what tasks need to be run frequently
+	- [ ] understand: what are the data or state changes that impact the app
 
 ## Feedback
 - [ ] choose a license for this project

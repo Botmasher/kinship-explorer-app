@@ -51,6 +51,6 @@ Both this UI and the embedded visualization were built as a leadup to a multimed
 
 ## License
 
-This application is licensed by GitHub user Botmasher (Joshua R) under the terms of the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html). The embedded game build alone `public/unity/production/` is licensed under the [LGPLv3](https://choosealicense.com/licenses/lgpl-3.0/).
+This application is licensed by GitHub user Botmasher (Joshua R) under the terms of the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html). The embedded game build alone (`public/unity/production/`) is under the [LGPLv3](https://choosealicense.com/licenses/lgpl-3.0/).
 
 Data from specific languages are not necessarily covered by the same license. Read through the [SOURCES.md](https://github.com/Botmasher/kinship-explorer-app/blob/master/SOURCES.md) to track down their licensing and use terms.

@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`handle loading clicks 1`] = `
+<div
+  className="App"
+>
+  <h1
+    className="app-title"
+  >
+    <span
+      className="letter-decoration"
+    >
+      K
+    </span>
+    inship 
+    <span
+      className="letter-decoration"
+    >
+      T
+    </span>
+    erm 
+    <span
+      className="letter-decoration"
+    >
+      E
+    </span>
+    xplorer
+  </h1>
+  <div>
+    <p>
+      My game player isn't loading on your browser or device. Do you happen to have one that
+       
+      <a
+        href="https://docs.unity3d.com/Manual/webgl-browsercompatibility.html"
+      >
+        supports Unity running on WebGL
+      </a>
+      ?
+    </p>
+  </div>
+</div>
+`;
+
+exports[`handles loading clicks 1`] = `
+<div
+  className="App"
+>
+  <h1
+    className="app-title"
+  >
+    <span
+      className="letter-decoration"
+    >
+      K
+    </span>
+    inship 
+    <span
+      className="letter-decoration"
+    >
+      T
+    </span>
+    erm 
+    <span
+      className="letter-decoration"
+    >
+      E
+    </span>
+    xplorer
+  </h1>
+  <div>
+    <p>
+      My game player isn't loading on your browser or device. Do you happen to have one that
+       
+      <a
+        href="https://docs.unity3d.com/Manual/webgl-browsercompatibility.html"
+      >
+        supports Unity running on WebGL
+      </a>
+      ?
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders a snapshot 1`] = `
+<div
+  className="App"
+>
+  <h1
+    className="app-title"
+  >
+    <span
+      className="letter-decoration"
+    >
+      K
+    </span>
+    inship 
+    <span
+      className="letter-decoration"
+    >
+      T
+    </span>
+    erm 
+    <span
+      className="letter-decoration"
+    >
+      E
+    </span>
+    xplorer
+  </h1>
+  <div>
+    <p>
+      My game player isn't loading on your browser or device. Do you happen to have one that
+       
+      <a
+        href="https://docs.unity3d.com/Manual/webgl-browsercompatibility.html"
+      >
+        supports Unity running on WebGL
+      </a>
+      ?
+    </p>
+  </div>
+</div>
+`;
