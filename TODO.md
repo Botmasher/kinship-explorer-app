@@ -23,7 +23,7 @@
 - [X] 404 routing
 - [X] allow scrolling when pointer over game instance
 	- [X] add scrollover back in (erased on new game build)
-	- [ ] modularize scrollover code to apply to future builds
+	- [X] modularize scrollover code to apply to future builds
 	- https://docs.unity3d.com/ScriptReference/WebGLInput-captureAllKeyboardInput.html
 	- https://stackoverflow.com/questions/38897929/unity-webgl-prevent-canvas-from-eating-up-all-mouse-keyboard-input-html
 - [X] break out route params check into a `GameContainer`
@@ -36,6 +36,8 @@
 
 ## Styles
 - [ ] CSS breakpoints for smaller widths
+	- [X] test breaking at small/medium width around 500
+	- [ ] understand: how to handle game visualization at low widths
 
 ## Server
 - [X] Heroku responding `404` instead of loading `react-router` routes
@@ -68,7 +70,7 @@
 	- [ ] understand: what are the data or state changes that impact the app
 
 ## Feedback
-- [ ] choose a license for this project
+- [X] choose a license for this project
 - [X] make it clear to user the difference between system name (e.g. Sudanese) and language (e.g. Latin)
 - [ ] (in game code) extend generations below ego, e.g. Dutch nephew/niece = cousin terms (https://www.patreon.com/posts/slapping-labels-17717106)
 	- [ ] changes game logic and family tree builder

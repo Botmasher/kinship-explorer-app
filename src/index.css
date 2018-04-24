@@ -53,7 +53,7 @@ body {
 }
 
 /* project dimensions as set in Unity */
-#gameContainer {
+#game-player {
 	width: 992px;
 	height: 558px;
 }

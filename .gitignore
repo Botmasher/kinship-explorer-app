@@ -11,6 +11,7 @@ Desktop.ini
 
 # testing
 /coverage
+__snapshots__/
 
 # misc
 .env.local

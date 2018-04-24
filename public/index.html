@@ -14,17 +14,7 @@
 		<script src="%PUBLIC_URL%/unity/UnityProgress.js"></script>  
 		<script src="%PUBLIC_URL%/unity/production/UnityLoader.js"></script>
 		<script>
-			var gameLoaded = false;
-			var gameInstance = UnityLoader.instantiate(
-				"gameContainer",
-				"%PUBLIC_URL%/unity/production/build.json",
-				{
-					onProgress: UnityProgress,
-					Module: {
-						backgroundColor: "#444db7"
-					}
-				}
-			);
+
 		</script>
 
 		<link rel="manifest" href="%PUBLIC_URL%/manifest.json">
@@ -55,8 +45,26 @@
 			To create a production bundle, use `npm run build` or `yarn build`.
 		-->
 		<script>
-			c = document.getElementById('canvas');
-			console.log(c);
+			var gameLoaded = false;
+			gameStarter = function() {
+				count = 0;
+				return function() {
+					count++;
+					console.log('Starting gameInstance #' + count);
+					return UnityLoader.instantiate(
+						"game-player",
+						"%PUBLIC_URL%/unity/production/build.json",
+						{
+							onProgress: UnityProgress,
+							Module: {
+								backgroundColor: "#444db7"
+							}
+						}
+					);
+				}
+			}
+			var instantiate = gameStarter();
+			var gameInstance = instantiate();
 		</script>
 	</body>
 </html>
