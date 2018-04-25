@@ -79,6 +79,21 @@ body {
 	}
 }
 
+@media screen and (max-width: 400px) {
+	#game-menu {
+		width: 94%;
+		margin-bottom: -100px;
+	}
+	.webgl-content {
+		margin-top: 120px;
+		transform: rotate(90deg) scale(0.6, 0.6);
+		margin-left: calc(0.34 * -992px);
+	}
+	.footer {
+		display: none;
+	}
+}
+
 a {
 	animation: txt-hover-out;
 	animation-duration: 0.5s;
