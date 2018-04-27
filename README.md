@@ -31,13 +31,30 @@ Now you're ready to play with the app and to tinker with project directory files
 
 Unlike some of my other leadup projects with their minimal interfaces, this one called for a visual approach where info is geometrically positioned and selectable on screen. I decided to start developing an app using C# and Unity. You can find the source files for that game/visualization [inside its own repo](https://github.com/Botmasher/kinship-term-explorer). I created a build of that app (located in `./public/unity/`) and embedded the build in this React frontend for the UI.
 
-This app wraps the Unity game build in a React frontend. The main page includes the Unity player and components for selecting kinship systems and example languages. The Unity build is compiled and saved under `/app/public/unity` and loaded at the head of the public `index.html`. React accesses the game session and messages its C# functions through `window.gameInstance` to pass data indicating the current language.
+This app wraps the Unity game build in a React frontend. The main page includes the Unity player and components for selecting kinship systems and example languages. The Unity build is compiled and saved under `./public/unity` and loaded at the head of the public `index.html`. React accesses the game session and messages its C# functions through `window.gameInstance` to pass data indicating the current language.
 
-The `public/` directory contains the app public index. The React App component is inserted into this page. The script on this page also instantiates a Unity game instance attached to the window. The React app messages this app to interact with the Unity build and send it a chosen language.
+### React frontend
 
-The main React work is found within the `src/` directory. The index file simply renders the main App component. The CSS does quite a bit of styling and animation work for this small app. The `components/` folder breaks pieces of the UI into a stateful parent `App` component and stateless functional children.
+The main React work is found within the `src/` directory. The index file renders the App component. The CSS does quite a bit of styling and animation work for this small app. The `components/` folder breaks pieces of the UI into a stateful parent `App` component and stateless functional children, with the lone exception of `GamePlayer` which manages adding a scroll listener atop the loaded game to counteract Unity's taking all input.
 
 The static `store/` holds a representation of the mapping between kinship systems and languages within each system, along with a text description of each system. This mapping is compared against the system passed through the route, which is then used to find a language to interact with the Unity build by messaging it with the selected language.
+
+### Unity build
+
+The `public/` directory contains the app's public `index.html`, which includes the root node for the React `App`. The script on this page also instantiates a Unity game instance attached to the window. The React app messages this app to interact with the Unity build and send it a chosen language.
+
+### Dataflow through the app
+
+Because of the way the app ties data to Unity and embeds the build in a React app, here are the steps it takes for kin term data to reach the UI:
+- update terms in the JSON file within the Unity project's `Assets/Resources/`
+- parse the JSON file and use the data in the Unity C# code (if changing game behavior)
+- build the Unity project
+- save the Unity build within `public/unity/production/`
+- update the app's store (if adding a new language or changing a language's system)
+
+Those steps make the language visible to the frontend, which can then alter the tree visualization:
+- select the language within a component (currently just available to be set as the representative of its system)
+- set up component to message the game instance with the selected language
 
 ## Academic basis
 
