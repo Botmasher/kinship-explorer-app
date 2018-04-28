@@ -2,13 +2,13 @@
 
 ## Overview of sources
 
-This app and the embedded visualization present data I've encountered in the my research for the animation I'm preparing. Brian Schwimmer's [pages at U of Manitoba](https://umanitoba.ca/faculties/arts/anthropology/tutor/kinterms/termsys.html) were a core starting point for this tool. Many of the languages used to demonstrate kin systems on that site are included in the final data. However, they were checked and modified based on specific sources.
+This app and the embedded visualization present data I've encountered in my research for the animation I'm preparing. I gave my main sources in the [Google doc](https://docs.google.com/document/d/1uwqu4DXqvhbLhIz689cqp0r-feKzyN6YT08TG4hTXGs/) for that animation. Brian Schwimmer's [pages at U of Manitoba](https://umanitoba.ca/faculties/arts/anthropology/tutor/kinterms/termsys.html) were a core starting point for this tool. Many of the languages used to demonstrate kin systems on that site are included in the final data. However, they were checked and modified based on specific sources.
 
-The current app only accesses the first example language stored in each array, but this document maintains a list of sources for all languages in the game JSON data. [Wiktionary](https://www.wiktionary.org/) was used as a first-pass check for many terms. Specific .
+The current app only accesses one example language per system, but this document maintains a list of sources for all languages in the game JSON data. [Wiktionary](https://www.wiktionary.org/) was used as a first-pass check for many terms.
 
 ## Sources for specific languages
 
-Besides the general sources above, other resources were needed to find and check terms in specific languages. These included:
+Besides the general sources above, others were needed to find and check terms in specific languages. These included:
 
 - [Nā puke wehewehe](http://wehewehe.org/) for checking Hawaiʻian terms
 - _Lengua y cultura Yanomami_ (Stenou et al.) for proposed Yanomamö grandparent terms
@@ -19,7 +19,7 @@ Besides the general sources above, other resources were needed to find and check
 	- http://navajopeople.org/blog/ke-dine-navajo-kinship-system/
 - [Perseus lexicon](http://www.perseus.tufts.edu/hopper/resolveform?lang=Latin) Latin headword search
 - Igbo has been tricky to check, but I've used:
-	- the U Manitoba page cites Ardener's 1954 paper "The Kinship Terminology of a Group of Southern Ibo"
+	- data from Ardener's 1954 paper "The Kinship Terminology of a Group of Southern Ibo" cited on Schwimmer's site
 	- http://www.rogerblench.info/Language/Niger-Congo/VN/Igboid/Igbo%20Dictionary.pdf
 
 ## Caveats
@@ -28,4 +28,4 @@ There are many cultural complications behind the simple terms used here. Conside
 
 ## Contributions
 
-More to add? Consider submitting a pull request with corrections or additions! Check out the JSON data file in the visualization repo if you're specifically interested in modifying the terms.
+More to add? Consider submitting a pull request with corrections or additions! If you're specifically interested in modifying the terms, check out the JSON data (currently in the visualization repo but eventually scheduled to live outside the game build).
